@@ -16,7 +16,7 @@
   line-height: 1.4;
 }
 .headline-content {
-  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgb(0, 0, 0); /* Fallback */
   background-color: rgba(0, 0, 0, 0.5); /* Black w/opacity/see-through */
   color: white;
   position: absolute;

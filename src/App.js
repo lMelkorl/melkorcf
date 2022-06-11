@@ -2,10 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 
-const Home = lazy(() => import('./components/Home/Home'));
 function App() {
-
-  // const Navbar = lazy(() => import('./components/Navbar/Navbar'));
+  const Home = lazy(() => import('./components/Home/Home'));
 
   return (
     <div className="App">
