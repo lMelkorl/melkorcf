@@ -26,7 +26,7 @@ export default function Navbar() {
           </div>
           <ul class="nav no-search">
             <li class="nav-item">
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li class="nav-item">
               <a href="#">About</a>
@@ -35,10 +35,10 @@ export default function Navbar() {
               <a href="#">Work</a>
             </li>
             <li class="nav-item">
-              <a href="#">Careers</a>
+              <a href="/login">Login</a>
             </li>
             <li class="nav-item">
-              <a href="#">Contact Us</a>
+              <a href="/register">Register</a>
             </li>
           </ul>
         </nav>

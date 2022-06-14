@@ -1,10 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 .xBar {
-  box-sizing: border-box;
   font-family: "Lato", "Arial", sans-serif;
+  position: relative;
+  z-index: 99;
 }
 
 /* HEADINGS */
@@ -26,7 +28,9 @@ p {
   line-height: 1.4;
   margin-bottom: 10px;
 }
-
+.xBar a {
+  text-decoration: none;
+}
 /* BASIC SETUP */
 
 .page-wrapper {
@@ -63,10 +67,10 @@ p {
 
 .navbar .ah2 {
   height: auto;
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   width: auto;
   justify-self: start;
-  margin-left: 20px;
+  margin-left: 5px;
 }
 .rainbow-text {
   background: linear-gradient(-45deg, violet, indigo, blue, green, orange, red);
@@ -241,6 +245,9 @@ p {
     position: fixed;
     justify-content: start;
     top: 55px;
+    left: 0;
+    bottom: 0;
+    right: 0;
     background-color: #fff;
     width: 100%;
     height: calc(100vh - 55px);
