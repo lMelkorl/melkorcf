@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "productName": "Magnum",
+      "image": "https://cdn.getir.com/product/559fed86f462100c00461d8b_tr_1618323792467.jpeg",
+      "unitPrice": 10
+    },
+    {
+      "id": 2,
+      "categoryId": 2,
+      "productName": "pop kek",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL-1p8iAlmeNs9U7wpqUsj77EQhHKt0bGNMO5CQAFoVw&s",
+      "unitPrice": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "categoryName": "Beverages"
+    },
+    {
+      "id": 2,
+      "categoryName": "cakes"
+    }
+  ]
+}

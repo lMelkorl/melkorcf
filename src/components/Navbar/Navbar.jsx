@@ -1,7 +1,12 @@
 import React from "react";
 import "./Navbar.css";
+import defaultpng from "../img/default.png";
+import CartSummary from "../Cart/CartSummary";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const user = true;
+
   const menuToggle = () => {
     const nav = document.querySelector(".nav");
     const mobileMenu = document.querySelector("#mobile-menu");
@@ -24,7 +29,7 @@ export default function Navbar() {
             <span class="bar"></span>
             <span class="bar"></span>
           </div>
-          <ul class="nav no-search">
+          <ul class="nav">
             <li class="nav-item">
               <a href="/">Home</a>
             </li>
@@ -32,14 +37,28 @@ export default function Navbar() {
               <a href="#">About</a>
             </li>
             <li class="nav-item">
-              <a href="#">Work</a>
+              <a href="#">Contact</a>
             </li>
-            <li class="nav-item">
-              <a href="/login">Login</a>
-            </li>
-            <li class="nav-item">
-              <a href="/register">Register</a>
-            </li>
+            {user ? (
+              <>
+                <li class="nav-item">
+                  <Link to={"/products"} id="cart">
+                    Products
+                  </Link>
+                </li>
+                &nbsp;
+                <img className="topImg" src={defaultpng} />
+              </>
+            ) : (
+              <>
+                <li class="nav-item">
+                  <a href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/register">Register</a>
+                </li>
+              </>
+            )}
           </ul>
         </nav>
       </div>

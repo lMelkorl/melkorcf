@@ -4,11 +4,14 @@ import Creditcard from './components/CreditCard/CreditCard';
 import Navbar from './components/Navbar/Navbar';
 
 function App() {
+  const user = true;
 
   const Home = lazy(() => import('./components/Home/Home'));
   const NotFound = lazy(() => import('./components/NotFound/NotFound'));
   const Register = lazy(() => import('./components/Register/Register'));
   const Login = lazy(() => import('./components/Login/Login'));
+  const Dashboard = lazy(() => import('./components/Products/Dashboard'));
+  const Basket = lazy(() => import('./components/Basket/Basket'));
 
   return (
     <div className="App">
@@ -20,8 +23,14 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
+            {user ? <>
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+            </> : (<>
+
+            </>)}
+            <Route path="/products" element={<Dashboard />} />
+            <Route path="/Basket" element={<Basket />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

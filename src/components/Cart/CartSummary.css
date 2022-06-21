@@ -1,0 +1,32 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+.ulCart {
+  list-style: none;
+}
+.ulCart a {
+  text-decoration: none;
+  color: #777777;
+}
+.ulCart a:hover {
+  color: #6394f8;
+}
+
+.badge {
+  background-color: #6394f8;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  padding: 3px 7px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 720px) {
+  .ulCart {
+    width: auto;
+    margin: 0px !important;
+  }
+}
