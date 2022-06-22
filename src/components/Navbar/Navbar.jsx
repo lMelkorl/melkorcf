@@ -42,9 +42,10 @@ export default function Navbar() {
             {user ? (
               <>
                 <li class="nav-item">
-                  <Link to={"/products"} id="cart">
+                  <a href="/products">Products</a>
+                  {/* <Link to={"/products"} id="cart">
                     Products
-                  </Link>
+                  </Link> */}
                 </li>
                 &nbsp;
                 <img className="topImg" src={defaultpng} />
