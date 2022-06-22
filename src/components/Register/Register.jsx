@@ -8,6 +8,8 @@ import StepTwo from "./Steps/StepTwo";
 import Creditcard from "../CreditCard/CreditCard";
 
 export default function Register() {
+  const user = true;
+
   const [step, setstep] = useState(1);
 
   //state for form data
@@ -43,17 +45,28 @@ export default function Register() {
     case 1:
       return (
         <div className="App">
-          <Container>
-            <Row>
-              <Col md={{ span: 6, offset: 3 }} className="custom-margin">
-                <StepOne
-                  nextStep={nextStep}
-                  handleFormData={handleInputData}
-                  values={formData}
-                />
-              </Col>
-            </Row>
-          </Container>
+          {user ? (
+            <>
+              <div className="text-center">
+                <h3 className="mt" style={{ marginTop: "5rem" }}>
+                  You have already registered
+                </h3>
+                <a href="/">Back To Home</a>
+              </div>
+            </>
+          ) : (
+            <Container>
+              <Row>
+                <Col md={{ span: 6, offset: 3 }} className="custom-margin">
+                  <StepOne
+                    nextStep={nextStep}
+                    handleFormData={handleInputData}
+                    values={formData}
+                  />
+                </Col>
+              </Row>
+            </Container>
+          )}
         </div>
       );
     // case 2 to show stepTwo form passing nextStep, prevStep, and handleInputData as handleFormData method as prop and also formData as value to the fprm

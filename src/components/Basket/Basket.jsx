@@ -17,7 +17,6 @@ function Basket(props) {
     props.cart.forEach((c) => {
       rqup.push(c.quantity * c.product.unitPrice);
       qx.push(c.quantity);
-      console.log(c);
     });
     setQup(rqup.reduce((partialSum, a) => partialSum + a, 0));
     setQuantity(qx.reduce((partialSum, a) => partialSum + a, 0));
@@ -43,6 +42,8 @@ function Basket(props) {
   const removeC = (product) => {
     removeFromCart(product);
   };
+
+  const checkout = () => {};
 
   return (
     <div className="Basket">
@@ -83,7 +84,9 @@ function Basket(props) {
                 </div>
                 <div class="total-amount">{qup}</div>
               </div>
-              <button class="buttonCheckout">Checkout</button>
+              <button class="buttonCheckout" onClick={() => checkout()}>
+                Checkout
+              </button>
             </>
           ) : (
             <>
